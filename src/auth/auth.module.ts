@@ -15,7 +15,7 @@ import { MailModule } from '../mails/mail.module';
 import { UsersModule } from '../users/user.module';
 import { Role } from '../roles/entities/role.entity';
 import { PassportModule } from '@nestjs/passport';
-import googleOauthConfig from '../core/config/google-oauth.config';
+// import googleOauthConfig from '../core/config/google-oauth.config';
 import { GoogleStrategy} from "./strategies/google.strategy";
 import { EmailJwtGuard } from './guards/email-jwt.guard';
 import { GoogleAuthGuard } from './guards/google-auth.guard';
@@ -36,7 +36,7 @@ import { SupabaseModule} from "../core/supabase/supabase.module";
     TypeOrmModule.forFeature([User, AuthRepository, Role]),
     JwtModule.registerAsync(jwtConfig.asProvider()),
     ConfigModule.forFeature(jwtConfig),
-    ConfigModule.forFeature(googleOauthConfig),
+    // ConfigModule.forFeature(googleOauthConfig),
     forwardRef(() => UsersModule),
     RedisModule,
     MailModule,
