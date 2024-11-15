@@ -16,7 +16,7 @@ import { UsersModule } from '../users/user.module';
 import { Role } from '../roles/entities/role.entity';
 import { PassportModule } from '@nestjs/passport';
 import googleOauthConfig from '../core/config/google-oauth.config';
-// import { GoogleStrategy} from "./strategies/google.strategy";
+import { GoogleStrategy} from "./strategies/google.strategy";
 import { EmailJwtGuard } from './guards/email-jwt.guard';
 import { GoogleAuthGuard } from './guards/google-auth.guard';
 import { SupabaseModule} from "../core/supabase/supabase.module";
